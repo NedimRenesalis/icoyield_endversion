@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i');
+
+.cke_editable, .cke_editable p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #292929;
+    -webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (min-width: 768px) {
+    .cke_editable, .cke_editable p {
+        font-size: 14px;
+    }
+}

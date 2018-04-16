@@ -1,0 +1,56 @@
+
+body {
+  font-size: 14px;
+  font-family: @baseFont;
+  color: @gray2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.gallery-open {
+    overflow-y: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  line-height: normal;
+  font-weight: normal;
+}
+
+a {
+  color: @mainColor;
+  text-decoration: none;
+  outline: none;
+
+  &:hover, &:active, &:focus{
+    text-decoration: none;
+    color: @colorSecondary;
+  }
+}
+
+.a-center {
+  text-align: center;
+}
+
+.collapse.in {
+  height: auto !important;
+}
+
+.no-results {
+  display: block;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+.mt10 {
+  margin-top: 10px;
+}

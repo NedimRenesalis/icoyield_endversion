@@ -1,0 +1,124 @@
+
+
+.pagination-custom {
+  padding: 10px 0;
+  text-align: center;
+
+  @media @tablet {
+    padding: 20px 0;
+  }
+
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 5px 0 0 0;
+
+    @media @tablet {
+      padding: 10px 0 0 0;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 0 0 0;
+    }
+  }
+
+  a {
+    display: block;
+    width: 28px;
+    height: 28px;
+    font-family: @headingFont;
+    font-size: 16px;
+    color: @gray3;
+    line-height: 24px;
+    text-decoration: none;
+    border-color: transparent;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    @media @tablet {
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &:hover {
+      color: @mainColor;
+      text-decoration: none;
+    }
+
+    &.active {
+      color: @mainColor;
+      border-color: @gray3;
+      background-color: @mainColorOpacity16;
+    }
+
+    &.prev, &.next {
+      width: 36px;
+      height: 36px;
+      border-color: @gray3;
+
+      @media @tablet {
+        width: 48px;
+        height: 48px;
+      }
+
+      span {
+        display: block;
+        margin: 5px 0 0 8px;
+        width: 14px;
+        height: 14px;
+
+        @media @tablet {
+          margin: 8px 0 0 13px;
+          width: 18px;
+          height: 18px;
+        }
+
+        svg {
+          width: 14px;
+          height: 14px;
+
+          @media @tablet {
+            width: 18px;
+            height: 18px;
+          }
+
+          polyline {
+            fill: none;
+            stroke: @gray2;
+            stroke-miterlimit: 10;
+          }
+        }
+      }
+
+      &:hover {
+        background-color: @mainColorOpacity16;
+      }
+    }
+
+    &.prev {
+      float: left;
+    }
+    &.next {
+      float: right;
+    }
+  }
+}

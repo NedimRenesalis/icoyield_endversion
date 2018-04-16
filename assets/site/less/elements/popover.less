@@ -1,0 +1,171 @@
+
+// POPOVERS
+
+//** Popover distance
+@popover-distance:                 15px;
+
+//** Popover body background color
+@popover-bg:                          @white;
+//** Popover maximum width
+@popover-max-width:                   225px;
+//** Popover border color
+@popover-border-color:                @mainColor;
+//** Popover fallback border color
+@popover-fallback-border-color:       @white;
+
+//** Popover arrow width
+@popover-arrow-width:                 10px;
+//** Popover arrow color
+@popover-arrow-color:                 @popover-bg;
+
+//** Popover outer arrow width
+@popover-arrow-outer-width:           (@popover-arrow-width + 1);
+//** Popover outer arrow color
+@popover-arrow-outer-color:           @popover-border-color;
+//** Popover outer arrow fallback color
+@popover-arrow-outer-fallback-color:  @popover-fallback-border-color;
+
+.popover {
+
+  &.ea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+    display: none;
+    max-width: @popover-max-width;
+    padding: 0;
+    font-family: @baseFont;
+    font-size: 12px;
+    color: @white;
+    text-align: center;
+    background-color: @popover-bg;
+    border: 1px solid @popover-border-color;
+    border: 1px solid @mainColorOpacity100;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+    .popover-title {
+      margin: 0; // reset heading margin
+      padding: 8px 14px;
+      font-family: @headingFont;
+      color: @white!important;
+      font-size: 16px;
+      background-color: @mainColor;
+      border: 0;
+      border-bottom: 1px solid @mainColorOpacity100;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+    }
+
+    .popover-content {
+      font-family: @baseFont;
+      font-size: 12px;
+      line-height: 20px;
+      color: @mainColor;
+      letter-spacing: 0.5px;
+      margin: 5px 0;
+      padding: 15px 15px;
+    }
+
+    &.top     { margin-top: -@popover-distance; }
+    &.right   { margin-left: @popover-distance; }
+    &.bottom  { margin-top: @popover-distance; }
+    &.left    { margin-left: -@popover-distance; }
+
+    > .arrow {
+      &:after {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+      }
+    }
+
+    > .arrow {
+      border-width: @popover-arrow-outer-width;
+
+      &:after {
+        border-width: @popover-arrow-width;
+        content: "";
+      }
+    }
+
+    &.top {
+      > .arrow {
+        left: 50%;
+        margin-left: -@popover-arrow-outer-width;
+        border-bottom-width: 0;
+        border-top-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+        border-top-color: @popover-arrow-outer-color;
+        bottom: -@popover-arrow-outer-width;
+        &:after {
+          content: " ";
+          bottom: 1px;
+          margin-left: -@popover-arrow-width;
+          border-bottom-width: 0;
+          border-top-color: @popover-arrow-color;
+        }
+      }
+    }
+
+    &.right {
+      > .arrow {
+        top: 50%;
+        left: -@popover-arrow-outer-width;
+        margin-top: -@popover-arrow-outer-width;
+        border-left-width: 0;
+        border-right-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+        border-right-color: @popover-arrow-outer-color;
+        &:after {
+          content: " ";
+          left: 1px;
+          bottom: -@popover-arrow-width;
+          border-left-width: 0;
+          border-right-color: @popover-arrow-color;
+        }
+      }
+    }
+
+    &.bottom {
+      > .arrow {
+        left: 50%;
+        margin-left: -@popover-arrow-outer-width;
+        border-top-width: 0;
+        border-bottom-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+        border-bottom-color: @popover-arrow-outer-color;
+        top: -@popover-arrow-outer-width;
+        &:after {
+          content: " ";
+          top: 1px;
+          margin-left: -@popover-arrow-width;
+          border-top-width: 0;
+          border-bottom-color: @popover-arrow-color;
+        }
+      }
+    }
+
+    &.left {
+      > .arrow {
+        top: 50%;
+        right: -@popover-arrow-outer-width;
+        margin-top: -@popover-arrow-outer-width;
+        border-right-width: 0;
+        border-left-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+        border-left-color: @popover-arrow-outer-color;
+        &:after {
+          content: " ";
+          right: 1px;
+          border-right-width: 0;
+          border-left-color: @popover-arrow-color;
+          bottom: -@popover-arrow-width;
+        }
+      }
+    }
+  }
+
+}

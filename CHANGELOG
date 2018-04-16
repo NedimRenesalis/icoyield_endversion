@@ -1,0 +1,113 @@
+--- -------------------------------------------
+--- Version 1.3 - 2018-03-16
+--- -------------------------------------------
+- Added Maps view in the search of all the listings after selecting location
+- Added filters and custom fields to the new Maps view
+- Added functionality for a customer to set listing location marker on the map
+- Added functionality for admin to edit and moderate a listing from admin panel including its promo package
+- Added new social login features: Google, Twitter and LinkedIn
+- Added better RTL views for all over the application
+- Added new logic and display for location search from drop-down
+- Added watermark extension with full control from admin panel
+- Added new upload logic for images in listings
+- Added new custom field type for URLs to add in categories
+- Added feature to notify by email a customer if admin changed customer's listing
+- Added functionality to deactivate all and activate all in : Countries, Zones and Currencies
+- Added feature to limit the number of allowed uploaded images
+- Added feature to permanently remove listing with all its media
+- Added feature to permanently remove customer with all the listings attached to this customer
+- Added feature to remove expired listings before a specific date
+- Added feature to disable upgrade to store option
+- Added notify customer before customer's listing expires
+- Added two new sections for ad banners to include ads in the new map views
+- Added feature to automatically remove junk media uploaded without attaching to a listing
+- Added feature for price and custom field to accept all kind of numbers (e.g. decimals)
+- Added feature to copy-paste into listing description
+- Added feature to upload extensions from admin panel
+- Fixed categories sorting in front-end
+- Fixed integrity issue on creating custom fields in a category
+- Fixed footer links issue
+- Fixed mobile thumbnail upload images
+- Optimised Facebook sharing attributes and graph params, now the listing will be shared correctly on Facebook
+- Optimised translation all over the application
+- Optimised mobile and desktop front-end views in all over the application
+- Optimised mail system component
+
+
+--- -------------------------------------------
+--- Version 1.1.1 - 2017-11-17
+--- -------------------------------------------
+
+- Added Contact Form logic
+- Added new functions in search: search by whole country, search in cities
+- Added Auto-selecting one country and/or one currency from admin
+- Added option to limit free ads per user
+- Added option to skip packages page by choosing one free default package
+- Added option to hide maps from ad pages
+- Added option to turn off invoices
+- Added option for custom Javascript code e.g. adding javascript external chat system
+- Added option for custom CSS code to customise directly from admin
+- Added function to manually send the emails from queue in email system
+- Added function to delete all emails stuck in queue
+- Added cron jobs in admin, to have the commands if not inserted in installation steps
+- Optimised translation all over the application
+- Optimised admin interface
+- Fixed bug with location written with special chars e.g. ś,é
+- Fixed bug with not fetching zones correctly
+- Fixed bug with tracking issues for favorite button
+- Fixed bug with tax incorrect calculation
+- Fixed bug with showing inactive locations in search location
+- Fixed bug with manual payment activation of order and invoice
+
+--- -------------------------------------------
+--- Version 1.1.0 - 2017-09-22
+--- -------------------------------------------
+
+- Added internal conversation system between buyers and sellers (including non-users)
+- Added feature in conversation system to Block user, archive conversation and delete conversation
+- Added advertising system for Adsense and sponsored banners
+- Added reCaptcha
+- Added manual payment gateway with admin approval and payment reference from bank
+- Added option to select application timezone from admin
+- Added option to remove ZIP code
+- Changed ZIP code to be optional
+- Added feature to send invoice in email after payment validation
+- Added feature to change active ad without selecting package
+- Added option for owner of listing to revise it directly from the listing page
+- Optimised gallery module and errors messages
+- Optimised admin interface
+- Optimised translation
+- Optimised mobile interface
+- Multiple application improvements
+- Multiple styling optimisation
+- Fixed bugs
+
+--- -------------------------------------------
+--- Version 1.0.2 - 2017-07-14
+--- -------------------------------------------
+
+- Added pretty url/clean url control
+- Added htaccess file generation
+- Multiple application improvements
+- Fixed bugs
+
+--- -------------------------------------------
+--- Version 1.0.1 - 2017-07-13
+--- -------------------------------------------
+
+- Added business store account
+- Added extension manager
+- Added admin control over ads number on homepage
+- Added internet accessibility to expired ads for SEO
+- Added hooks for developers
+- Multiple application improvements
+- Optimized application assets
+- Optimized search engine
+- Fixed bug translation with region code present
+- Fixed facebook share fetching wrong ad image
+
+--- -------------------------------------------
+--- Version 1.0 - 2017-06-15
+--- -------------------------------------------
+
+- Initial release

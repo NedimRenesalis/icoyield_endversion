@@ -1,0 +1,53 @@
+
+.separator-text {
+  position: relative;
+  overflow: hidden;
+  min-height: 10px;
+  text-transform: uppercase;
+  margin: 30px 0 20px 0;
+
+  @media @tablet {
+    margin: 60px 0 40px 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    height: 1px;
+    width: 100%;
+    background-color: @gray1;
+  }
+
+  &.a-center {
+    text-align: center;
+
+    span {
+      font-family: @baseFont;
+      display: inline-block;
+      padding: 0 20px;
+      background-color: @white;
+    }
+  }
+
+  &.no-margin-top {
+    margin-top: 0;
+  }
+
+  span {
+    font-family: @headingFont;
+    display: inline-block;
+    padding: 0 20px 0 0;
+    background-color: @white;
+  }
+}
+
+html[dir=rtl] {
+  .separator-text {
+    span {
+      padding: 0 0px 0 20px;
+    }
+  }
+}

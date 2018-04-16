@@ -1,0 +1,138 @@
+
+.sign-up {
+  padding: 20px 15px 70px 15px;
+
+  @media @desktop {
+    padding: 80px 0 140px 0;
+  }
+
+  h1 {
+    position: relative;
+    font-family: @headingFont;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    &:before {
+      content: "";
+      display: block;
+      background-color: @mainColor;
+      width: 60px;
+      height: 4px;
+      margin: 0 0;
+    }
+
+    span {
+      font-family: @baseFont;
+      font-size: 12px;
+      text-transform: none;
+      display: block;
+
+      @media @tablet {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  form {
+
+    @media @desktop {
+      padding: 15px 0 0 0;
+    }
+
+    .links {
+      padding: 0 10px 40px 10px;
+
+
+      &:before, &:after {
+        display: table;
+        content: " ";
+      }
+      &:after {
+        clear: both;
+      }
+    }
+
+    .required-fields {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      margin: 0 0 13px 0;
+
+      @media @tablet {
+        text-align: left;
+        margin: 13px 0 0 0;
+      }
+    }
+
+    a, button {
+      color: @mainColor;
+
+      &.forgot {
+        display: inline-block;
+        margin: 15px 0 0 0;
+      }
+
+      &.btn-as {
+        color: @white;
+        min-height: 40px;
+        min-width: 150px;
+        text-align: center;
+
+        &.pull-right {
+          float: none!important;
+          margin: 0 auto;
+
+          @media @tablet {
+            float: right!important;
+          }
+        }
+
+        &.facebook {
+          background-color: @facebookColor;
+          border-color: @facebookColor;
+
+          &:hover {
+            opacity: 0.8;
+            border-color: @facebookColor;
+          }
+        }
+
+        &.googleplus {
+          background-color: @googlePlusColor;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    .separator-text {
+      position: relative;
+      overflow: hidden;
+      min-height: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 40px 0 40px 0;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: -1;
+        height: 1px;
+        width: 100%;
+        background-color: @gray1;
+      }
+
+      span {
+        display: inline-block;
+        padding: 0 20px;
+        background-color: @white;
+      }
+    }
+  }
+}

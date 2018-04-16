@@ -1,0 +1,180 @@
+
+.btn-as {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid @mainColor;
+  background-color: @mainColor;
+  color: @white;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: @headingFont;
+  text-decoration: none;
+  line-height: 40px;
+  z-index: 0;
+  padding: 0 20px;
+  height: 40px;
+  min-width: 90px;
+  //-webkit-transition: border-color 0.3s,color 0.3s;
+  //transition: border-color 0.3s,color 0.3s;
+  transition: all 0.2s ease;
+  outline: none!important;
+  vertical-align:top;
+  margin-right: 7px;
+  margin-bottom: 10px;
+
+  /*
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150%;
+    background-color: @black;
+    z-index: -1;
+    -webkit-transform: rotate3d(0,0,1,0deg) translate3d(0,0,0);
+    transform: rotate3d(0,0,1,0deg) translate3d(0,0,0);
+    //-webkit-transform: rotate3d(0,0,1,-45deg) translate3d(0,-3em,0);
+    //transform: rotate3d(0,0,1,-45deg) translate3d(0,-3em,0);
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transition: -webkit-transform 0.3s,opacity 0.3s,background-color 0.3s;
+    transition: transform 0.3s,opacity 0.3s,background-color 0.3s;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-color: @mainColor;
+  }
+
+  &:hover {
+    border: 1px solid @black;
+    background-color: @black;
+
+    &:before {
+      opacity: 1;
+      -webkit-transform: rotate3d(0,0,1,0deg);
+      transform: rotate3d(0,0,1,0deg);
+      -webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+      transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+    }
+  }
+  */
+
+  &:focus, &:active {
+    outline: none;
+    color: @white;
+  }
+
+  &:hover {
+    color: @white;
+    background-color: @colorSecondary;
+    border: 1px solid @colorSecondary;
+  }
+
+  &.transparent {
+    color: @black;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &.black {
+    background-color: @gray3;
+    border-color: @gray3;
+
+    &:hover {
+      background-color: @black;
+      border-color: @black;
+    }
+  }
+
+  &.reverse {
+    color: @mainColor;
+    background-color: @white;
+
+    &:hover {
+      color: @white;
+      background-color: @colorSecondary;
+      border-color: @colorSecondary;
+    }
+  }
+
+  &.secondary {
+    color: @white;
+    background-color: @colorSecondary;
+    border-color: @colorSecondary;
+  }
+
+  &.danger-action {
+    background-color: @gray3;
+    border-color: @gray3;
+
+    &:hover {
+      background-color: @colorThird;
+      border-color: @colorThird;
+    }
+  }
+
+  /* *** */
+
+  &.a-center {
+    margin: 0 auto!important;
+  }
+
+  /* *** */
+
+  .fa {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  /* *** */
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+html[dir=rtl] {
+  .btn-as {
+    .fa {
+      margin-right: 0px !important;
+      margin-left: 5px !important;
+    }
+  }
+}
+
+.btn-hint {
+  position: relative;
+  display: inline-block;
+  //width: 18px;
+  //height: 18px;
+  background-color: transparent;
+  font-family: @baseFont;
+  color: @mainColor;
+  font-size: 12px;
+  text-align: center;
+  //-webkit-border-radius: 50%;
+  //-moz-border-radius: 50%;
+  //border-radius: 50%;
+  text-decoration: none;
+  //overflow: hidden;
+
+  &:hover {
+    color: @mainColor!important;
+  }
+
+  .fa {
+    margin: 0!important;
+    font-size: 20px;
+
+  }
+}

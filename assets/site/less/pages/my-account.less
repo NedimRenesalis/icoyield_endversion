@@ -1,0 +1,97 @@
+
+.my-account {
+
+  .block {
+    padding: 0 0 20px 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid @gray1;
+
+    &:last-child {
+      border-width: 0;
+    }
+
+    .block-heading {
+      padding: 20px 0 20px 0;
+
+      h1 {
+        position: relative;
+        font-family: @headingFont;
+        font-size: 24px;
+        text-transform: uppercase;
+
+        @media @tablet {
+          font-size: 36px;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          background-color: @mainColor;
+          width: 60px;
+          height: 4px;
+          margin: 0 0;
+        }
+
+        .info {
+          display: block;
+          font-family: @baseFont;
+          font-size: 12px;
+          color: @mainColor;
+          text-transform: none;
+
+          @media @tablet {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .btn-trigger-collapse {
+        float: right;
+        display: inline-block;
+        margin: 30px 0 0 0;
+
+        .info-title {
+          font-family: @headingFont;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: @gray2;
+
+          &.closed {
+            display: none;
+          }
+        }
+
+        &.collapsed {
+          .info-title {
+            display: none;
+
+            &.closed {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+
+    .block-body {
+
+      form {
+        padding: 0 0 50px 0;
+        max-width: 800px;
+      }
+    }
+  }
+
+}
+
+html[dir=rtl] {
+  .my-account {
+    .block {
+      .block-heading {
+        .btn-trigger-collapse {
+          float: left;
+        }
+      }
+    }
+  }
+}

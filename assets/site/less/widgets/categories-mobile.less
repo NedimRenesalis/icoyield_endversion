@@ -1,0 +1,131 @@
+
+.categories-mobile {
+  padding: 10px 0 0 0;
+  background-color: @white;
+  
+  @media @tablet {
+    display: none;
+  }
+
+  .browse {
+    position: relative;
+    font-family: @headingFont;
+    color: @white;
+    font-size: 18px;
+    padding: 10px 15px 10px 15px;
+    margin: 0 -15px 0 -15px;
+    background-color: @colorSecondary;
+    display: block;
+
+    &:after {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      content: "\f107";
+      font-family: @awesomeFont;
+      color: @white;
+      font-size: 24px;
+      line-height: 18px;
+    }
+  }
+
+  .panel {
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+
+    .panel-heading {
+      padding: 0;
+      border-bottom: 0;
+      border-top: 1px solid @white;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+
+      a {
+        position: relative;
+        display: table;
+        height: 40px;
+        width: 100%;
+        font-family: @headingFont;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 0 0;
+        color: @mainColor;
+        text-decoration: none;
+
+        &:after {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          content: "\f105";
+          font-family: @awesomeFont;
+          color: @mainColor;
+          font-size: 18px;
+          line-height: 18px;
+        }
+
+        &[aria-expanded="true"] {
+          &:after {
+            content: "\f106";
+          }
+        }
+
+        span {
+          display: table-cell;
+          vertical-align: middle;
+
+          &:first-child {
+            width: 40px;
+            text-align: center;
+          }
+          &:nth-child(2) {
+
+          }
+        }
+
+        .fa {
+          font-size: 18px;
+          margin-top: -3px;
+
+          &.fa-home {
+            font-size: 24px;
+          }
+          &.fa-child {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    .panel-collapse {
+
+      ul {
+        list-style: none;
+        margin: 0 10px 0 10px;
+        padding: 0 0 0 0;
+
+        li {
+          padding: 10px 0;
+          border-top: 1px dashed @blackOpacity25;
+
+          a {
+            display: block;
+            color: @mainColor;
+
+            span {
+              display: block;
+              font-size: 10px;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "twisted1919/yii2-notify",
+  "type": "yii2-extension",
+  "description": "Success/Error/Warning/Info notification component",
+  "keywords": ["yii2", "notify", "notifications"],
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/twisted1919/yii2-notify/issues",
+    "source": "https://github.com/twisted1919/yii2-notify"
+  },
+  "authors": [
+    {
+      "name": "twisted1919"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "yiisoft/yii2": "*",
+    "twisted1919/yii2-shortcut-functions": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "twisted1919\\notify\\": ""
+    }
+  }
+}

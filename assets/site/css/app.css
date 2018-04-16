@@ -1,0 +1,9 @@
+html[dir=rtl] input[type=checkbox], html[dir=rtl] input[type=radio] {
+    position: absolute;
+    right: -1000em !important;
+    left: 0 !important;
+    opacity:0;
+}
+html[dir=rtl] .owl-carousel .owl-stage-outer{
+    float:inherit !important;
+}

@@ -1,0 +1,179 @@
+.conversation-reply {
+  padding-bottom: 20px;
+
+  @media @tablet {
+    padding-bottom: 0px;
+  }
+
+  .center-block {
+    float: none;
+    margin: 0 auto;
+  }
+  .truncate-ellipsis {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .truncate-ellipsis > * {
+    display: table-cell;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .talk-bubble {
+    margin: 10px 0;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .talk-bubble.border.btm-left-in {
+    background-color: @mainColorOpacity10;
+  }
+
+  .talk-bubble.border.btm-right-in {
+    background-color: @colorSecondaryOpacity10;
+  }
+  .border {
+    border-radius: 5px
+  }
+  /* talk bubble contents */
+  .talktext {
+    padding: 1em;
+    text-align: left;
+    line-height: 1.5em;
+  }
+
+  textarea {
+    &.form-control {
+      height: 175px;
+    }
+  }
+
+  .info-bar {
+    padding-left: 30px;
+
+    li {
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    &.pull-right {
+      padding-left: 0px;
+      padding-right: 26px;
+    }
+  }
+
+  .block {
+    padding: 40px 0 0 0;
+    margin: 20px 0 0 0;
+    border-top: 1px solid @gray1;
+  }
+
+  .block-heading {
+    padding: 20px 0 20px 0;
+    margin: 0 0 40px 0;
+    border-bottom: 1px solid @gray1;
+
+    a.title {
+      position: relative;
+      font-family: @headingFont;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: @gray2;
+
+      &:hover {
+        color: @colorSecondary;
+      }
+
+      @media @tablet {
+        font-size: 36px;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        background-color: @mainColor;
+        width: 60px;
+        height: 4px;
+        margin: 0 0;
+      }
+
+      .info {
+        display: block;
+        font-family: @baseFont;
+        font-size: 12px;
+        color: @mainColor;
+        text-transform: none;
+
+        @media @tablet {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .actions {
+    text-align: center;
+
+    @media @tablet {
+      text-align: right;
+    }
+
+    .btn-as {
+      margin-top: 9px;
+
+      &.transparent {
+        &:hover {
+          color: @mainColor;
+          background: @gray0;
+        }
+      }
+    }
+  }
+}
+
+html[dir=rtl] {
+  .conversation-reply {
+    .actions {
+      @media @tablet {
+        text-align: left;
+      }
+    }
+
+    .fa{
+      &.fa-lock {
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.inbox {
+  .tab-content {
+    padding-top: 30px;
+  }
+
+  .nav-tabs {
+    text-align: center;
+
+    > li {
+      float: none;
+      display: inline-block;
+
+      > a {
+        padding: 15px 30px;
+        font-weight: bold;
+        border-radius: 0;
+        color: @gray2;
+
+        &:hover {
+          background: @colorSecondary;
+          color: @gray0;
+          border-color: @colorSecondary;
+        }
+      }
+    }
+  }
+}

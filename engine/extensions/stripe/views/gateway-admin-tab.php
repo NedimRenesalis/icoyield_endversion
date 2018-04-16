@@ -1,0 +1,1 @@
+<li><a data-toggle="tab" href="#<?=$paymentMethod;?>"><?=t('app',ucfirst($paymentMethod));?></a></li>

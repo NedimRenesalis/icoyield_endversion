@@ -1,0 +1,305 @@
+
+.pricing {
+  padding: 35px 0 0 0;
+
+  @media @desktop {
+    padding: 70px 0 0 0;
+  }
+
+  h1 {
+    position: relative;
+    font-family: @headingFont;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    &:before {
+      content: "";
+      display: block;
+      background-color: @mainColor;
+      width: 60px;
+      height: 4px;
+      margin: 0 0;
+    }
+  }
+
+  .pricing-packages {
+
+    @media @desktop {
+      border: 1px solid @gray1;
+      -moz-border-radius-topleft: 10px;
+      -webkit-border-top-left-radius: 10px;
+      border-top-left-radius: 10px;
+      -moz-border-radius-topright: 10px;
+      -webkit-border-top-right-radius: 10px;
+      border-top-right-radius: 10px;
+      margin: 0 auto 40px auto;
+    }
+
+    &:before, &:after {
+      display: table;
+      content: " ";
+    }
+    &:after {
+      clear: both;
+    }
+
+    .item {
+      min-height: 100px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      border: 1px solid @gray1;
+      //background-color: #ffffff;
+      margin-bottom: 25px;
+
+      @media @desktop {
+        float: left;
+        width: 25%;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: 0;
+        border-right: 1px solid @gray1;
+        //background-color: #ffffff;
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background-color: @gray0;
+
+        .price {
+          background-color: @gray4;
+        }
+      }
+
+      &:last-child {
+
+
+        @media @desktop {
+          border-right: 0;
+        }
+      }
+
+      &:nth-child(1) {
+        .package {
+          //background-color: #e5f6f7;
+        }
+      }
+      &:nth-child(2) {
+        .package {
+          //background-color: #dbf0f4;
+        }
+      }
+      &:nth-child(3) {
+        .package {
+          //background-color: #cce7ed;
+        }
+      }
+      &:nth-child(4) {
+        .package {
+          //background-color: #c1e0e7;
+        }
+      }
+
+      .recommended {
+        background-color: @mainColor;
+        text-align: center;
+        padding: 8px 0 0 0;
+        font-family: @baseFont;
+        color: @white;
+        text-transform: uppercase;
+        height: 35px;
+        overflow: hidden;
+        -moz-border-radius-topleft: 5px;
+        -webkit-border-top-left-radius: 5px;
+        border-top-left-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        -webkit-border-top-right-radius: 5px;
+        border-top-right-radius: 5px;
+
+        @media @desktop {
+          margin: -35px 0 0 0;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0;
+        }
+      }
+
+      .info {
+        position: relative;
+        text-align: center;
+        padding: 0 15px;
+
+        @media @desktop {
+          min-height: 170px;
+          padding: 0 20px;
+        }
+
+        .name {
+          position: relative;
+          padding: 15px 0 10px 0;
+          margin-bottom: 10px;
+          font-family: @headingFont;
+          color: @mainColor;
+          font-size: 22px;
+          text-transform: uppercase;
+
+          @media @desktop {
+            padding: 25px 0 20px 0;
+            margin-bottom: 20px;
+            font-size: 22px;
+          }
+
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #cdcdcd;
+            margin-left: -20px;
+          }
+        }
+
+        .description {
+          font-family: @baseFont;
+          color: @gray2;
+          margin-bottom: 15px;
+
+          @media @desktop {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .package {
+        display: table;
+        height: 100px;
+        width: 100%;
+        border-top: 1px solid @gray1;
+
+        @media @desktop {
+          height: 180px;
+        }
+
+        .number {
+          display: table-cell;
+          vertical-align: middle;
+          width: 100%;
+          text-align: center;
+          font-family: @baseFont;
+          font-size: 24px;
+          color: @mainColor;
+          text-transform: uppercase;
+
+          @media @desktop {
+            font-size: 24px;
+          }
+
+          span {
+            font-family: @baseFont;
+            color: @mainColor;
+            font-size: 110px;
+
+            @media @desktop {
+              font-size: 110px;
+            }
+          }
+        }
+      }
+
+      .price {
+        padding: 25px 0 25px 0;
+        background-color: @gray0;
+
+        @media @desktop {
+          min-height: 125px;
+          padding: 0 0 0 0;
+        }
+
+        span {
+          display: block;
+          text-align: center;
+          font-family: @baseFont;
+
+          &.number {
+            padding-top: 10px;
+            font-size: 50px;
+            line-height: 40px;
+            color: @gray2;
+
+            @media @desktop {
+              padding-top: 30px;
+              font-size: 50px;
+              line-height: 40px;
+            }
+
+            sup {
+              font-size: 24px;
+              line-height: 20px;
+              color: @gray2;
+              vertical-align: middle;
+
+              @media @desktop {
+                font-size: 24px;
+                line-height: 20px;
+              }
+            }
+          }
+
+          &.each {
+            padding: 10px 0 0 0;
+            color: @gray3;
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .buy {
+        padding: 15px 0;
+        text-align: center;
+
+        @media @desktop {
+          padding: 20px 0;
+        }
+
+        .btn-gfj {
+          font-family: @headingFont;
+          color: @white;
+          background-color: #cdcdcd;
+          border-color: #cdcdcd;
+
+          &:hover {
+            background-color: @mainColor;
+            border-color: @mainColor;
+          }
+
+          &.large {
+            min-width: 175px;
+            padding: 14px 0;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .expires {
+        padding: 0 0 13px 0;
+        font-family: @baseFont;
+        color: @gray2;
+        font-size: 14px;
+        line-height: 14px;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media @desktop {
+          padding: 13px 0;
+          border-top: 1px solid @gray1;
+        }
+      }
+    }
+  }
+
+}

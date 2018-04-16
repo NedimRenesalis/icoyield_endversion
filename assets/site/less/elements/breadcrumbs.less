@@ -1,0 +1,145 @@
+
+.breadcrumb {
+  padding: 0;
+  background-color: @gray0;
+  list-style: none;
+  overflow: hidden;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+
+  > li {
+    + li {
+      &:before {
+        padding: 0;
+      }
+    }
+  }
+
+  li {
+    float: left;
+
+    &:first-child {
+      a {
+        padding-left: 15px;
+      }
+    }
+
+    &.active {
+      a {
+        background-color: @gray1;
+
+        &:after {
+          border-left: 30px solid @gray1;
+        }
+      }
+    }
+
+    a {
+      font-family: @headingFont;
+      color: @gray2;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 10px 0 10px 45px;
+      position: relative;
+      display: block;
+      float: left;
+      min-height: 41px;
+
+      &:after {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid hsla(0, 0%, 98%, 1);
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 100%;
+        z-index: 2;
+      }
+
+      &:before {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid @gray1;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        margin-left: 1px;
+        left: 100%;
+        z-index: 1;
+      }
+
+      &:hover {
+        background-color: @gray1;
+
+        &:after {
+          border-left-color: @gray1!important;
+        }
+      }
+    }
+  }
+
+  .fa-home {
+    font-size: 20px;
+  }
+}
+
+html[dir=rtl] {
+  .breadcrumb {
+    li {
+      float: right;
+      &:first-child {
+        a {
+          padding-right: 15px;
+          padding-left: 0px;
+        }
+      }
+
+      a {
+        padding: 10px 45px 10px 0px;
+        float: right;
+
+        &:before {
+          width: 0;
+          height: 0;
+          border-top: 50px solid transparent;
+          border-bottom: 50px solid transparent;
+          border-right: 30px solid #e1e1e1;
+          border-left: none;
+          top: 50%;
+          margin-top: -50px;
+          margin-right: 1px;
+          margin-left: 0;
+          right: 100%;
+          left: inherit;
+        }
+        &:after {
+          width: 0;
+          height: 0;
+          border-top: 50px solid transparent;
+          border-bottom: 50px solid transparent;
+          border-right: 30px solid #fafafa;
+          border-left: none;
+          top: 50%;
+          margin-top: -50px;
+          right: 100%;
+          left: inherit;
+        }
+        &:hover {
+          &:after {
+            border-right-color: @gray1 !important;
+          }
+        }
+      }
+    }
+
+  }
+}

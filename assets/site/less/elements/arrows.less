@@ -1,0 +1,26 @@
+
+.arrow-gallery {
+  width: 15px;
+  height: 30px;
+
+  @media @desktop {
+    width: 30px;
+    height: 60px;
+  }
+
+  svg {
+    width: 15px;
+    height: 30px;
+
+    @media @tablet {
+      width: 30px;
+      height: 60px;
+    }
+
+    polyline {
+      fill: none;
+      stroke: @white;
+      stroke-miterlimit: 10;
+    }
+  }
+}

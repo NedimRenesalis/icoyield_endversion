@@ -1,0 +1,1 @@
+<?= app()->trigger('admin.ad.form.fields.list');?>

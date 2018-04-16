@@ -1,0 +1,27 @@
+{
+  "name": "twisted1919/yii2-helpers",
+  "type": "yii2-helpers",
+  "description": "Collection of static classes used as common helpers",
+  "keywords": ["yii2", "helpers"],
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/twisted1919/yii2-helpers/issues",
+    "source": "https://github.com/twisted1919/yii2-helpers"
+  },
+  "authors": [
+    {
+      "name": "twisted1919"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "yiisoft/yii2": "*",
+    "twisted1919/yii2-shortcut-functions": "*",
+    "symfony/finder": "^2.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "twisted1919\\helpers\\": ""
+    }
+  }
+}
